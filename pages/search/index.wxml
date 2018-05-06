@@ -1,0 +1,43 @@
+<view class='search-bar {{search?"is-search":""}}'>
+  <view>
+    <view class='bd'>
+      <input placeholder="输入你想搜索的新闻标题" bindblur="blur" name="keyword" value='{{keyword}}' bindinput='enter' focus confirm-type="搜索" />
+    </view>
+    <view class='ft'>
+      <icon bindtap="search" type="search" bindtap='search' size='16' color='#000'></icon>
+    </view>
+  </view>
+</view>
+
+
+<view wx:if="{{!search}}" class='hot'>
+  <view class='hot-tit'>热门搜索</view>
+  <view class='tag'>
+    <text bindtap='setkeyword' data-key="{{item}}" wx:for="{{keywords}}">{{item}}</text>
+  </view>
+</view>
+
+
+<scroll-view wx:if="{{search}}" class='search-view' scroll-y="true" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll">
+  <view class="list-header">搜索结果</view>
+  <view wx:if="{{list.length>0}}" class="news-list">
+    <block wx:for="{{list}}" wx:key="item">
+      <navigator wx:if="{{item.pic}}" class='news-item' url="../newsDetail/index?id={{item.id}}">
+        <view class="item-hd">
+          <image mode="aspectFill" class="pic" src="{{item.pic}}"></image>
+        </view>
+        <view class="item-bd">
+          <text class="title">{{item.title}}</text>
+          <text class="intro">{{item.lasttime}}</text>
+        </view>
+      </navigator>
+      <navigator wx:else class='news-item' url="../newsDetail/index?id={{item.id}}">
+        <view class="item-bd">
+          <view class="title">{{item.title}}</view>
+          <text class="intro">{{item.lasttime}}</text>
+        </view>
+      </navigator>
+    </block>
+  </view>
+  <view class='list-footer'>{{list.length==0?'没有相关内容':'只有这么多了'}}</view>
+</scroll-view>

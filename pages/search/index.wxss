@@ -1,0 +1,86 @@
+.search-bar{
+  margin: 10vh 10vw 5vh;
+}
+.search-bar>view{
+  height: 36px;
+  border: 1px solid #dddddd;
+  border-radius: 50px;
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  padding: 5px 15px 5px 20px;
+}
+
+.search-bar.is-search{
+  margin: 5px 15px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: #fff;
+  padding: 10px 0;
+}
+
+.search-view{
+  padding-top:56px;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+}
+
+.search-bar .bd{
+  flex: 1;
+}
+.search-bar .bd input{
+  font-size: 14px;
+  border: 0 none;
+}
+
+.hot{
+  width: 80vw;
+  margin: 0 auto;
+}
+.hot .hot-tit{
+  font-size: 14px;margin-bottom: 20px;
+}
+.hot .tag{
+  margin-top: 10px;
+}
+.hot .tag >text{
+  background: #ddd;
+  border: 1px solid #ccc;
+  padding: 6px 12px;
+  font-size: 12px;
+  border-radius: 50px;
+  margin-right: 10px;
+  display: inline-block;
+  margin-bottom: 10px;
+  line-height: 1;
+}
+.hot .tag >text:nth-child(1n){
+  background: rgba(254,130,90,.2);
+  border-color: rgba(254,130,90,.6);
+  color: rgba(254,130,90,1);
+}
+.hot .tag >text:nth-child(2n){
+  background: rgba(238,164,42,.2);
+  border-color: rgba(238,164,42,.6);
+  color: rgba(238,164,42,1);
+}
+.hot .tag >text:nth-child(3n){
+  background: rgba(152,87,159,.2);
+  border-color: rgba(152,87,159,.6);
+  color: rgba(152,87,159,1);
+}
+.hot .tag >text:nth-child(4n){
+  background: rgba(196,41,53,.2);
+  border-color: rgba(196,41,53,.6);
+  color: rgba(196,41,53,1);
+}
+.hot .tag >text:nth-child(5n){
+  background: rgba(101,143,225,.2);
+  border-color: rgba(101,143,225,.6);
+  color: rgba(101,143,225,1);
+}

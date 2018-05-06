@@ -1,0 +1,12 @@
+<view class='cells'>
+          <navigator class='cell' url="../more/detail?id=4">
+            <view class="item-bd">
+              <view class="title">关于募融富</view>
+            </view>
+          </navigator>
+          <navigator class='cell' url="../more/detail?id=3">
+            <view class="item-bd">
+              <view class="title">商务合作</view>
+            </view>
+          </navigator>
+</view>

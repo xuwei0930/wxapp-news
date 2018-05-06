@@ -1,0 +1,15 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/newsDetail/index",
+    "pages/search/index",
+    "pages/more/index",
+    "pages/more/detail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#bb83b4",
+    "navigationBarTitleText": "募融富",
+    "navigationBarTextStyle": "#fff"
+  }
+}

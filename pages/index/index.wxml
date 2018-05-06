@@ -1,0 +1,44 @@
+<view class='topbar'>
+<scroll-view scroll-x="true" class='category'>
+  <view wx:for="{{navs}}" bindtap='modalChange' data-index="{{item.cid}}" class="{{item.active?'cur':''}}">{{item.name}}</view>
+</scroll-view>
+  <navigator class='search' url="../search/index">
+    <icon type='search' color='#fff' size='18'></icon>
+    </navigator>
+</view>
+<view class='home'>
+  <swiper class='swiper' indicator-dots="true" autoplay="true" interval="3000" duration="400">
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+  <navigator class='search' url="../newsDetail/index?id={{item.id}}">
+        <image src="{{item.pic}}" mode="aspectFill" class="slide-image" />
+    </navigator>
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <view class="body-view">
+    <view wx:if="{{datas.length>0}}" class="news-list">
+      <block wx:for="{{datas}}" wx:key="item">
+        <navigator wx:if="{{item.pic}}" class='news-item' url="../newsDetail/index?id={{item.id}}">
+            <view class="item-hd">
+              <image mode="aspectFill" class="pic" src="{{item.pic}}"></image>
+            </view>
+            <view class="item-bd">
+              <text class="title">{{item.title}}</text>
+              <text class="intro">{{item.lasttime}}</text>
+            </view>
+          </navigator>
+          <navigator wx:else class='news-item' url="../newsDetail/index?id={{item.id}}">
+            <view class="item-bd">
+              <view class="title">{{item.title}}</view>
+              <text class="intro">{{item.lasttime}}</text>
+            </view>
+          </navigator>
+      </block>
+    </view>
+    <view class='list-footer'>{{datas.length==0?'没有相关内容':'只有这么多了'}}</view>
+  </view>
+  </view>
+
+  <navigator url='../more/index' class='more'><image src='/images/more.png' mode="aspectFill" /></navigator>

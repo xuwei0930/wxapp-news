@@ -1,0 +1,113 @@
+/**app.wxss**/
+.container {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+} 
+
+page{
+  background: #f8f8f8;
+}
+
+.news-list{
+  position: relative;
+}
+.news-list:before{
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 1px;
+    border-top: 1px solid #e5e5e5;
+    color: #e5e5e5;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+    z-index: 2;  
+}
+.news-list:after{
+    content: " ";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 1px;
+    border-bottom: 1px solid #e5e5e5;
+    color: #e5e5e5;
+    -webkit-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+    z-index: 2;
+}
+
+.news-list .news-item{
+  position: relative;
+  padding: 10px 15px;
+    display: flex;
+    align-items: start;
+}
+.news-list .news-item:after{
+      content: " ";
+    position: absolute;
+    left: 15px;
+    bottom: 0;
+    right: 0;
+    height: 1px;
+    border-bottom: 1px solid #e5e5e5;
+    color: #e5e5e5;
+    -webkit-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+    z-index: 2;
+    
+}
+
+.news-list .news-item:last-child::after{
+  display: none;
+}
+
+.news-list .news-item .item-hd{
+  margin-right: 15px;
+}
+.news-list .news-item .item-hd .pic{
+  width: 120px;
+  height: 76px;
+  border-radius: 3px;
+}
+
+.news-list .news-item .item-bd{
+flex: 1;
+}
+.news-list .news-item .item-bd .title{
+  font-size: 16px;
+  display: block;
+  margin-bottom: 5px;
+  overflow: hidden;
+  line-height: 24px;
+  height: 48px;
+}
+.news-list .news-item .item-bd .intro{
+  font-size: 12px;
+  display: block;
+  color: #999;
+  line-height: 23px;
+}
+
+.list-header{
+  font-size: 12px;
+  text-align: left;
+  padding: 10px 15px;
+  color: #999;
+}
+
+
+.list-footer{
+  font-size: 12px;
+  text-align: center;
+  padding: 10px;
+  color: #999;
+}
