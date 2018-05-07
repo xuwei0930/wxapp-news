@@ -93,19 +93,3 @@
   height: 320rpx;
 }
 
-
-.more{
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  width: 42px;
-  height: 42px;
-  background: rgba(187,131,180,1);
-  border-radius: 50px;
-  z-index: 99999;
-}
-.more image{
-  width: 30px;
-  height: 30px;
-  margin: 6px;
-}

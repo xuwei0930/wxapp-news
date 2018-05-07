@@ -7,12 +7,14 @@ Page({
   },
 
   onShareAppMessage: function (res) {
-    return getApp().shareData
+    return Object.assign(getApp().shareData, {
+      path: "pages/newsDetail/index?id=" + this.id
+    })
   },
   onLoad: function (options) {
 
     var self = this;
-    var optionId = options.id;
+    var optionId = this.id =  options.id;
     wx.showLoading({
       title: '请稍后',
     })

@@ -111,3 +111,30 @@ flex: 1;
   padding: 10px;
   color: #999;
 }
+
+
+.more{
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 42px;
+  height: 42px;
+  background: rgba(187,131,180,1);
+  border-radius: 50px;
+  z-index: 99999;
+  overflow: hidden;
+  padding: 0;
+}
+
+
+.more:after{
+  display: none;
+  border:none;
+  border-radius: 0;
+}
+
+.more image{
+  width: 26px;
+  height: 26px;
+  margin: 8px;
+}

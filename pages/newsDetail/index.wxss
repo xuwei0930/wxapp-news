@@ -1,7 +1,7 @@
 @import "/wxParse/wxParse.wxss";
 
 .detail{
-  padding: 10px 15px;
+  padding: 20px 15px 30px;
 }
 
 .title {
@@ -28,4 +28,51 @@
 
 .wxParse-p .wxParse-img{
   text-indent: -2em !important;
+}
+
+.fixed-bottom{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  border-top: 1px solid #eee;
+  display: flex;
+}
+.fixed-bottom .item{
+  flex: 1;
+  font-size: 14px;
+  text-align: center;
+  line-height: 40px;
+  position: relative;
+  border: 0 none;
+  background: none;
+  border-radius: 0;
+}
+.fixed-bottom .item:after{
+  display: none;
+  border:none;
+  border-radius: 0;
+}
+/* .fixed-bottom .item:first-child::after{
+  content: "";
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-right: 1px solid #ddd;
+  position: absolute;
+  transform: scaleX(.5);
+  display: block;
+} */
+.fixed-bottom .item .icon{
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+  vertical-align: top;
+  margin: 10px 10px 0 0;
+}
+.fixed-bottom .item .icon image{
+  width: 22px;
+  height: 22px;
+  display: block;
 }
