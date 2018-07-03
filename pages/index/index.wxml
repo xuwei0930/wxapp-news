@@ -1,6 +1,6 @@
 <view class='topbar'>
 <scroll-view scroll-x="true" class='category'>
-  <view wx:for="{{navs}}" bindtap='modalChange' data-index="{{item.cid}}" class="{{item.active?'cur':''}}">{{item.name}}</view>
+  <view wx:for="{{navs}}" wx:key="{{index}}" bindtap='modalChange' data-index="{{item.cid}}" class="{{item.active?'cur':''}}">{{item.name}}</view>
 </scroll-view>
   <navigator class='search' url="../search/index">
     <icon type='search' color='#fff' size='18'></icon>
@@ -8,7 +8,7 @@
 </view>
 <view class='home'>
   <swiper class='swiper' indicator-dots="true" autoplay="true" interval="3000" duration="400">
-    <block wx:for="{{imgUrls}}">
+    <block wx:for="{{imgUrls}}" wx:key="{{index}}">
       <swiper-item>
   <navigator class='search' url="../newsDetail/index?id={{item.id}}">
         <image src="{{item.pic}}" mode="aspectFill" class="slide-image" />

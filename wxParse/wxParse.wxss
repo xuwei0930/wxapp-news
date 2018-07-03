@@ -22,6 +22,11 @@ view{
 .wxParse-h4{ margin: 1.12em 0}
 .wxParse-h5 { font-size:.83em; margin: 1.5em 0 }
 .wxParse-h6{ font-size:.75em; margin: 1.67em 0 }
+.wxParse-p{ 
+text-indent: 2em;
+ margin: .83em 0;
+ line-height: 1.6;
+}
 
 .wxParse-h1 {
   font-size: 18px;
@@ -85,8 +90,9 @@ view{
 .wxParse-img{
     background-color: #efefef;
     overflow: hidden;
-    width:40px;
-    height: 40px;
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
 }
 
 .wxParse-blockquote {
